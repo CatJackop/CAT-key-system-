@@ -1,0 +1,9 @@
+{
+  "name": "cathub-key-ggs",
+  "version": "1.0.0",
+  "private": true,
+  "description": "CAT HUB Key System - Netlify Functions + PostgreSQL",
+  "dependencies": {
+    "@neondatabase/serverless": "^1.0.1"
+  }
+}
