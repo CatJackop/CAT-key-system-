@@ -1,0 +1,31 @@
+[build]
+  publish = "public"
+  functions = "netlify/functions"
+
+[functions]
+  node_bundler = "esbuild"
+
+[[redirects]]
+  from = "/api/get-key"
+  to = "/.netlify/functions/get-key"
+  status = 200
+
+[[redirects]]
+  from = "/api/verify-key"
+  to = "/.netlify/functions/verify-key"
+  status = 200
+
+[[redirects]]
+  from = "/api/admin/keys"
+  to = "/.netlify/functions/admin-keys"
+  status = 200
+
+[[redirects]]
+  from = "/api/admin/create-key"
+  to = "/.netlify/functions/admin-create-key"
+  status = 200
+
+[[redirects]]
+  from = "/api/admin/revoke-key"
+  to = "/.netlify/functions/admin-revoke-key"
+  status = 200
