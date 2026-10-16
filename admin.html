@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>CAT HUB Admin</title><link rel="stylesheet" href="/style.css"></head>
+<body>
+<header class="top"><div class="brand"><span class="cat">🐱</span><div><b>CAT HUB</b><small>ADMIN DASHBOARD</small></div></div><a href="/" class="admin-link">HOME</a></header>
+<main class="card wide">
+<div class="pill">OWNER ACCESS</div><h1>Key <em>management</em></h1>
+<p class="muted">Enter the admin secret configured in Netlify environment variables.</p>
+<form id="loginForm" class="stack"><input id="adminSecret" type="password" placeholder="Admin secret" autocomplete="current-password" required><button class="primary">UNLOCK DASHBOARD</button></form>
+<section id="panel" class="hidden">
+<div class="divider"></div><h2>Create a key</h2>
+<form id="createForm" class="stack">
+<input id="duration" type="number" min="1" max="8760" value="24" required>
+<small class="muted">Duration in hours (24 = 1 day, 168 = 7 days, 720 ≈ 30 days)</small>
+<input id="label" maxlength="80" placeholder="Optional note / user label">
+<button class="primary">CREATE KEY</button>
+</form>
+<p id="adminStatus" class="status"></p>
+<div class="divider"></div><div class="row"><h2>All keys</h2><button id="refresh" class="secondary">REFRESH</button></div>
+<div id="keys" class="keys"></div>
+</section>
+<p id="loginStatus" class="status"></p>
+</main>
+<footer>CAT HUB · Owner tools</footer>
+<script src="/admin.js"></script>
+</body>
+</html>

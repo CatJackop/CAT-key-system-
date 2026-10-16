@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#111111">
+<title>CAT HUB KEY SYSTEM</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="top"><div class="brand"><span class="cat">🐱</span><div><b>CAT HUB</b><small>KEY SYSTEM</small></div></div><a href="/admin.html" class="admin-link">ADMIN</a></header>
+<main class="card">
+<div class="pill">SECURE KEY PORTAL</div>
+<h1>Get your <em>CAT HUB</em> key</h1>
+<p class="muted">Generate a unique key and copy it somewhere safe.</p>
+<button id="getKey" class="primary">GET KEY</button>
+<div id="result" class="result hidden"><label>Your key</label><code id="keyText"></code><button id="copy" class="secondary">COPY KEY</button></div>
+<p id="status" role="status" class="status"></p>
+<div class="divider"></div>
+<h2>Verify a key</h2>
+<form id="verifyForm"><input id="verifyInput" placeholder="cat-XXXXXXXX" autocomplete="off" required><button class="secondary" type="submit">VERIFY</button></form>
+<p id="verifyStatus" role="status" class="status"></p>
+<p class="tiny">Keys activate on first successful verification. Expiration duration is set by the system administrator.</p>
+</main>
+<footer>CAT HUB · CATJack.gg</footer>
+<script src="/app.js"></script>
+</body>
+</html>
